@@ -10,5 +10,55 @@
       "StackName": "rb23-20181226201757",
       "StackId": "arn:aws:cloudformation:us-east-1:988241215703:stack/rb23-20181226201757/3ed74630-0975-11e9-a91d-126936f15c76"
     }
+  },
+  "auth": {
+    "cognito5e66a7da": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/auth/cognito5e66a7da-cloudformation-template.yml",
+        "logicalId": "authcognito5e66a7da"
+      },
+      "lastPushTimeStamp": "2018-12-27T01:27:58.365Z",
+      "output": {
+        "IdentityPoolId": "us-east-1:d90c3331-b97f-4ca3-8fa0-bb1d466cf5c6",
+        "IdentityPoolName": "rb23_identitypool_76941595"
+      },
+      "lastPushDirHash": "PyLoCCCTtfzntTMawK6bj3oLn9U="
+    }
+  },
+  "analytics": {
+    "rb23": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsrb23"
+      },
+      "lastPushTimeStamp": "2018-12-27T01:25:36.485Z",
+      "output": {
+        "appName": "rb23",
+        "Region": "us-east-1",
+        "Id": "c7b72249fdcd45608ae3e918d91003c8"
+      },
+      "lastPushDirHash": "+kkICs/Pt2EvrZHEX6cgLAT69LM="
+    }
+  },
+  "storage": {
+    "css": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storagecss"
+      },
+      "lastPushTimeStamp": "2018-12-27T01:34:31.032Z"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

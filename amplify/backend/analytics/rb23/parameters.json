@@ -1,0 +1,11 @@
+{
+  "appName": "rb23",
+  "roleName": "pinpointLambdaRoleac31455e",
+  "cloudWatchPolicyName": "cloudWatchPolicyac31455e",
+  "pinpointPolicyName": "pinpointPolicyac31455e",
+  "authPolicyName": "pinpoint_amplify_ac31455e",
+  "unauthPolicyName": "pinpoint_amplify_ac31455e",
+  "authRoleName": "rb23-20181226201757-authRole",
+  "unauthRoleName": "rb23-20181226201757-unauthRole",
+  "IAMPrefix": "988241215703"
+}
