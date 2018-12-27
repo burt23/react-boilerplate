@@ -19,7 +19,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/auth/cognito5e66a7da-cloudformation-template.yml",
         "logicalId": "authcognito5e66a7da"
       },
-      "lastPushTimeStamp": "2018-12-27T01:27:58.365Z",
+      "lastPushTimeStamp": "2018-12-27T02:00:56.588Z",
       "output": {
         "IdentityPoolId": "us-east-1:d90c3331-b97f-4ca3-8fa0-bb1d466cf5c6",
         "IdentityPoolName": "rb23_identitypool_76941595"
@@ -52,13 +52,18 @@
         "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
         "logicalId": "storagecss"
       },
-      "lastPushTimeStamp": "2018-12-27T01:34:31.032Z"
+      "lastPushTimeStamp": "2018-12-27T02:00:56.727Z"
     }
   },
   "hosting": {
     "S3AndCloudFront": {
       "service": "S3AndCloudFront",
-      "providerPlugin": "awscloudformation"
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushTimeStamp": "2018-12-27T02:01:21.962Z"
     }
   }
 }

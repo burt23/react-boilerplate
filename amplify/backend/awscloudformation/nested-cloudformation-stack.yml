@@ -158,6 +158,13 @@
 					"unauthPermissions": ""
 				}
 			}
+		},
+		"hostingS3AndCloudFront": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/rb23-20181226201757-deployment/amplify-cfn-templates/hosting/template.json",
+				"Parameters": {}
+			}
 		}
 	},
 	"Outputs": {
