@@ -16,4 +16,12 @@ export default defineMessages({
     id: `${scope}.features`,
     defaultMessage: 'Features',
   },
+  about: {
+    id: `${scope}.about`,
+    defaultMessage: 'About',
+  },
+  admin: {
+    id: `${scope}.admin`,
+    defaultMessage: 'Admin',
+  },
 });

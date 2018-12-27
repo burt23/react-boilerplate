@@ -1,7 +1,7 @@
 {
   "identityPoolName": "rb23_identitypool_76941595",
   "allowUnauthenticatedIdentities": false,
-  "thirdPartyAuth": false,
+  "thirdPartyAuth": true,
   "lambdaLogPolicy": "rb23_lambda_log_policy",
   "openIdLambdaRoleName": "rb23_openid_lambda_role",
   "openIdRolePolicy": "rb23_openid_pass_role_policy",
@@ -9,12 +9,12 @@
   "openIdLogPolicy": "rb23_openid_lambda_log_policy",
   "userPoolName": "cognito5e66a7da_userpool_c5d96071",
   "autoVerifiedAttributes": ["email"],
-  "mfaConfiguration": "OFF",
-  "mfaTypes": ["SMS Text Message"],
+  "mfaConfiguration": "OPTIONAL",
+  "mfaTypes": ["SMS Text Message", "TOTP"],
   "roleName": "cognito5e66a7da_sns-role",
   "roleExternalId": "cognito5e66a7da_role_external_id",
   "policyName": "cognito5e66a7da-sns-policy",
-  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsAuthenticationMessage": "{####}",
   "smsVerificationMessage": "Your verification code is {####}",
   "emailVerificationSubject": "Your verification code",
   "emailVerificationMessage": "Your verification code is {####}",
@@ -29,8 +29,15 @@
   "requiredAttributes": ["email"],
   "userpoolClientName": "cognito5e66a7da_app_client",
   "userpoolClientGenerateSecret": true,
-  "userpoolClientRefreshTokenValidity": 30,
-  "userpoolClientReadAttributes": ["email"],
+  "userpoolClientRefreshTokenValidity": "10",
+  "userpoolClientReadAttributes": [
+    "email",
+    "name",
+    "preferred_username",
+    "picture",
+    "email_verified",
+    "phone_number_verified"
+  ],
   "mfaLambdaRole": "cognito5e66a7da_totp_lambda_role",
   "mfaLambdaLogPolicy": "cognito5e66a7da_totp_lambda_log_policy",
   "mfaPassRolePolicy": "cognito5e66a7da_totp_pass_role_policy",
@@ -38,11 +45,28 @@
   "userpoolClientLambdaRole": "cognito5e66a7da_userpoolclient_lambda_role",
   "userpoolClientLogPolicy": "cognito5e66a7da_userpoolclient_lambda_log_policy",
   "userpoolClientLambdaPolicy": "cognito5e66a7da_userpoolclient_lambda_iam_policy",
-  "userpoolClientSetAttributes": false,
+  "userpoolClientSetAttributes": true,
   "authSelections": "identityPoolAndUserPool",
   "resourceName": "cognito5e66a7da",
   "unAuthRoleName": "rb23-20181226201757-unauthRole",
   "authRoleName": "rb23-20181226201757-authRole",
   "unAuthRoleArn": "arn:aws:iam::988241215703:role/rb23-20181226201757-unauthRole",
-  "authRoleArn": "arn:aws:iam::988241215703:role/rb23-20181226201757-authRole"
+  "authRoleArn": "arn:aws:iam::988241215703:role/rb23-20181226201757-authRole",
+  "useDefault": "manual",
+  "authProviders": [
+    "graph.facebook.com",
+    "accounts.google.com",
+    "www.amazon.com"
+  ],
+  "facebookAppId": "362396514494413",
+  "googleClientId": "15026108479-pu3vk1ib6g9bs4lav5as87vcg3oqho63.apps.googleusercontent.com",
+  "amazonAppId": "c7b72249fdcd45608ae3e918d91003c8",
+  "userpoolClientWriteAttributes": [
+    "name",
+    "phone_number",
+    "preferred_username",
+    "picture",
+    "email"
+  ],
+  "selectedParties": "{\"graph.facebook.com\":\"362396514494413\",\"accounts.google.com\":\"15026108479-pu3vk1ib6g9bs4lav5as87vcg3oqho63.apps.googleusercontent.com\",\"www.amazon.com\":\"c7b72249fdcd45608ae3e918d91003c8\"}"
 }

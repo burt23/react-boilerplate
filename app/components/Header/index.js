@@ -23,6 +23,12 @@ class Header extends React.Component {
           <HeaderLink to="/features">
             <FormattedMessage {...messages.features} />
           </HeaderLink>
+          <HeaderLink to="/about">
+            <FormattedMessage {...messages.about} />
+          </HeaderLink>
+          <HeaderLink to="/admin">
+            <FormattedMessage {...messages.admin} />
+          </HeaderLink>
         </NavBar>
       </div>
     );
